@@ -20,7 +20,7 @@ graph LR
     R --> M["7. squash マージ<br>Issue 自動クローズ"]
 ```
 
-1. **Issue を切る**: 1 Issue = 1変更意図（粒度の定義は「粒度の暫定ルール」節）。**達成条件**と**対応範囲**（やること / やらないこと）を本文に必須——「やらないこと」がレビューの境界になる。必須欄の一覧は Issue / PR 書式規約（conventions/issue-pr-format.md）。マイルストーンを付ける
+1. **Issue を切る**: 1 Issue = 1変更意図（粒度の定義は「粒度の暫定ルール」節）。**達成条件**と**対応範囲**（やること / やらないこと）を本文に必須——「やらないこと」がレビューの境界になる。書かれていないと、レビュアーは意図的な割り切りと単なる不足を区別できない。必須欄の一覧は Issue / PR 書式規約（conventions/issue-pr-format.md）。マイルストーンを付ける
 2. **ブランチ**: ブランチ規約（conventions/branching.md）に従い `<type>/<issue番号>-<slug>` で main から切る
 3. **作成・修正ループ**: 1回のセルフチェックで済ませず、**チェック基準をすべて満たすまで「作成 → 検査 → 修正」を繰り返す**。基準: 秘匿情報スキャン（社名・実値・ARN・アカウント ID・人名）、技術的主張の出典（conventions/citation.md）、正典違反の有無（canon.md）、リンク切れ。機構化後は lint チェーン（markdownlint / textlint / Mermaid コンパイル）もここに入る
 4. **PR を出す**: 1 PR = 1 Issue。本文は Issue / PR 書式規約（conventions/issue-pr-format.md）に従い、「確認したいこと」でレビュー観点を宣言する。**PR 本文がレビュー依頼の正典**——修正で内容が変わったら本文を必ず最新状態に更新し、経緯を持ち込まない。コメントは議論・質問にだけ使う
@@ -38,5 +38,5 @@ graph LR
 
 ## enforcement（規約は機構が守らせる）
 
-- 導入済み: Issue / PR テンプレートとラベル（詳細は conventions/issue-pr-format.md）、マージ方式の設定（詳細は conventions/branching.md）
-- 未導入（願望段階）: 3 の検査の自動化（block-secrets フック = 導入済み #3、lint チェーン = M3 周1〜2）、5 の Agent チェックの機構化（citation-verifier = M3 周2、consistency-checker = M3 周5、CI の claude -p 回帰 = M3 周5）
+- 導入済み: Issue / PR テンプレートとラベル（詳細は conventions/issue-pr-format.md）、マージ方式の設定（詳細は conventions/branching.md）、block-secrets フック（手順3の秘匿情報検査を機械化。#3 で導入）
+- 未導入（願望段階）: 3 の残りの検査の自動化（lint チェーン = M3 周1〜2）、5 の Agent チェックの機構化（citation-verifier = M3 周2、consistency-checker = M3 周5、CI の claude -p 回帰 = M3 周5）
