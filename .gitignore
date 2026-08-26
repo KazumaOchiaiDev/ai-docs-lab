@@ -1,0 +1,3 @@
+# 公開できない固有の秘匿パターン（社名等）はローカルにのみ置く
+.claude/hooks/secrets-patterns.local
+.claude/settings.local.json
