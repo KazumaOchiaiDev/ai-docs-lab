@@ -1,0 +1,39 @@
+name: 作業 Issue
+description: 1 Issue = 1変更意図。書式の定義は conventions/authoring-process.md
+body:
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景・目的
+      description: なぜこの変更が必要か（1〜3行）
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 達成条件
+      description: 満たしたら完了と言える条件をチェックボックスで書く
+      value: |
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: in_scope
+    attributes:
+      label: 対応範囲 — やること
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: 対応範囲 — やらないこと（レビューの境界）
+      description: 意図的に対象外とするもの。扱う先（別 Issue / 後続マイルストーン）も書く
+    validations:
+      required: true
+  - type: input
+    id: depends
+    attributes:
+      label: 依存
+      description: 依存する Issue / PR。なければ「なし」
+    validations:
+      required: false
