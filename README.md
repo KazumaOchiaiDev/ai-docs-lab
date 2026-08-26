@@ -21,6 +21,8 @@ AI 駆動開発では、ボトルネックは実装ではなくドキュメン�
 ## 構成
 
 - [ROADMAP.md](ROADMAP.md) — 研究ロードマップ（進行の正典）
-- [research/](research/) — 先行調査レポート、評価設計、Claude Code 実装レイヤー設計、文献マップ（約90本）
+- [canon.md](canon.md) — 正典の階層の定義（事実=IaC / 決定=ADR / 意図=spec / 議事録=ソース）
+- [conventions/](conventions/) — 規約群（出典規約から順次追加）
+- [research/](research/) — 先行調査レポート、評価設計、Claude Code 実装レイヤー設計、三軸フレーム、文献マップ（約90本）
 
 ※ 本リポジトリの実験はすべて架空のサンプル AWS 構成で行っており、特定の組織・実在システムの情報は含まれない。
