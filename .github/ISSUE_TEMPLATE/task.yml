@@ -13,8 +13,7 @@ body:
     attributes:
       label: 達成条件
       description: 満たしたら完了と言える条件をチェックボックスで書く
-      value: |
-        - [ ]
+      placeholder: "- [ ] 例: ○○が△△の状態になっている"
     validations:
       required: true
   - type: textarea
@@ -26,14 +25,14 @@ body:
   - type: textarea
     id: out_of_scope
     attributes:
-      label: 対応範囲 — やらないこと（レビューの境界）
-      description: 意図的に対象外とするもの。扱う先（別 Issue / 後続マイルストーン）も書く
+      label: 対応範囲 — やらないこと
+      description: 意図的に対象外とするもの（レビューの境界になる）。扱う先（別 Issue / 後続マイルストーン）も書く
     validations:
       required: true
   - type: input
     id: depends
     attributes:
       label: 依存
-      description: 依存する Issue / PR。なければ「なし」
+      description: 依存する Issue / PR。なければ「なし」と書く
     validations:
-      required: false
+      required: true
