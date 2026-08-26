@@ -26,6 +26,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 4. **1実験 = 1記事、失敗した施策も成功と同価値で記録する**: 「効かなかった」という結果を消したり美化したりしない
 5. ファイル命名: `research/` は `YYYY-MM-DD_種別_タイトル.md`。文書は日本語 + Mermaid 図
 
+## 作業の回し方
+
+すべての作成・修正は `conventions/authoring-process.md` の一周ループで回す: Issue（1成果物・達成条件必須）→ ブランチ `<type>/<issue番号>-<slug>` → 基準を満たすまで作成・修正ループ → PR（レビュー観点を宣言）→ Agent チェック → 人間レビュー → squash マージ。main への直接 push はしない。
+
 ## 中核原則
 
 「**規約は機構が守らせる**」——規約を導入するときは必ず enforcement（rules / skill / hook / subagent / CI）をセットで実装する。機構のない規約はまだ願望。この CLAUDE.md 自体も設計仕様の「薄い constitution（50行以内）」規律に従う。詳細規約は将来 `.claude/rules/` に path-scoped で置く。
