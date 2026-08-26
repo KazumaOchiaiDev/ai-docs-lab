@@ -4,8 +4,15 @@ body:
   - type: textarea
     id: background
     attributes:
-      label: 背景・目的
-      description: なぜこの変更が必要か（1〜3行）
+      label: 背景
+      description: いまどういう状況・問題があるか（1〜3行）
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 目的
+      description: この Issue で何を実現したいか（1〜2行）
     validations:
       required: true
   - type: textarea
