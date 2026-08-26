@@ -28,7 +28,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 作業の回し方
 
-すべての作成・修正は `conventions/authoring-process.md` の一周ループで回す: Issue（1成果物・達成条件必須）→ ブランチ `<type>/<issue番号>-<slug>` → 基準を満たすまで作成・修正ループ → PR（レビュー観点を宣言）→ Agent チェック → 人間レビュー → squash マージ。main への直接 push はしない。
+すべての作成・修正は `conventions/authoring-process.md` の一周ループ（Issue → ブランチ → 作成・修正ループ → PR → Agent チェック → 人間レビュー → squash マージ）で回す。main への直接 push はしない。ブランチ命名は `conventions/branching.md`、Issue / PR の書式は `conventions/issue-pr-format.md` に従う。
 
 ## 中核原則
 
