@@ -1,5 +1,5 @@
 name: 作業 Issue
-description: 1 Issue = 1変更意図。書式の定義は conventions/authoring-process.md
+description: 1 Issue = 1変更意図。書式の定義は conventions/issue-pr-format.md
 body:
   - type: textarea
     id: background
